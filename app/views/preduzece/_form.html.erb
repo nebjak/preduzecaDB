@@ -1,0 +1,57 @@
+<%= form_for(@preduzece) do |f| %>
+  <% if @preduzece.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@preduzece.errors.count, "error") %> prohibited this preduzece from being saved:</h2>
+
+      <ul>
+      <% @preduzece.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :_id %><br>
+    <%= f.number_field :_id %>
+  </div>
+  <div class="field">
+    <%= f.label :delatnost_id %><br>
+    <%= f.number_field :delatnost_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mesto_id %><br>
+    <%= f.number_field :mesto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status_id %><br>
+    <%= f.number_field :status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :naziv %><br>
+    <%= f.text_field :naziv %>
+  </div>
+  <div class="field">
+    <%= f.label :post_broj %><br>
+    <%= f.text_field :post_broj %>
+  </div>
+  <div class="field">
+    <%= f.label :adresa %><br>
+    <%= f.text_field :adresa %>
+  </div>
+  <div class="field">
+    <%= f.label :sajt %><br>
+    <%= f.text_field :sajt %>
+  </div>
+  <div class="field">
+    <%= f.label :napomena %><br>
+    <%= f.text_field :napomena %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

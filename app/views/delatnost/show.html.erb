@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <h1><%= @delatnost.delatnost %></h1>
+</div>
+<p>
+  <%= link_to 'Back', delatnost_index_path, class: "btn btn-inverse btn-small" %>
+</p>
+<ol>
+  <% @preduzeca.each do |p| %>
+    <li><%= link_to p.naziv, p %></li>
+  <% end %>
+</ol>

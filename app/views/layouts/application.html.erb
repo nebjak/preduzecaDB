@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PreduzecaDB</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <a class="brand" href="#">PreduzecaDB</a>
+      <ul class="nav">
+        <li><%= link_to "Početak", root_path %></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <div id="loading-indicator" class="progress progress-striped active span2">
+            <div class="bar" style="width: 100%;"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

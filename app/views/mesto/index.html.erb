@@ -1,0 +1,31 @@
+<h1>Listing mesto</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Mesto</th>
+      <th>Izbor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mesto.each do |mesto| %>
+      <tr>
+        <td><%= mesto._id %></td>
+        <td><%= mesto.mesto %></td>
+        <td><%= mesto.izbor %></td>
+        <td><%= link_to 'Show', mesto %></td>
+        <td><%= link_to 'Edit', edit_mesto_path(mesto) %></td>
+        <td><%= link_to 'Destroy', mesto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mesto', new_mesto_path %>

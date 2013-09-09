@@ -1,0 +1,29 @@
+<h1>Listing tip_telefona</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Tip telefona</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tip_telefona.each do |tip_telefona| %>
+      <tr>
+        <td><%= tip_telefona._id %></td>
+        <td><%= tip_telefona.tip_telefona %></td>
+        <td><%= link_to 'Show', tip_telefona %></td>
+        <td><%= link_to 'Edit', edit_tip_telefona_path(tip_telefona) %></td>
+        <td><%= link_to 'Destroy', tip_telefona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tip telefona', new_tip_telefona_path %>

@@ -1,0 +1,17 @@
+<h1>Lista delatnosti</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Delatnost</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @delatnost.each do |delatnost| %>
+      <tr>
+        <td><%= link_to delatnost.delatnost, delatnost %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

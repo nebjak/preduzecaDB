@@ -1,0 +1,33 @@
+<h1>Listing preduzece_telefon</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Preduzece</th>
+      <th>Tip telefona</th>
+      <th>Telefon</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preduzece_telefon.each do |preduzece_telefon| %>
+      <tr>
+        <td><%= preduzece_telefon._id %></td>
+        <td><%= preduzece_telefon.preduzece_id %></td>
+        <td><%= preduzece_telefon.tip_telefona_id %></td>
+        <td><%= preduzece_telefon.telefon %></td>
+        <td><%= link_to 'Show', preduzece_telefon %></td>
+        <td><%= link_to 'Edit', edit_preduzece_telefon_path(preduzece_telefon) %></td>
+        <td><%= link_to 'Destroy', preduzece_telefon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preduzece telefon', new_preduzece_telefon_path %>

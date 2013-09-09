@@ -1,0 +1,45 @@
+<h1>Listing preduzece</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Delatnost</th>
+      <th>Mesto</th>
+      <th>Status</th>
+      <th>Id</th>
+      <th>Naziv</th>
+      <th>Post broj</th>
+      <th>Adresa</th>
+      <th>Sajt</th>
+      <th>Napomena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preduzece.each do |preduzece| %>
+      <tr>
+        <td><%= preduzece._id %></td>
+        <td><%= preduzece.delatnost_id %></td>
+        <td><%= preduzece.mesto_id %></td>
+        <td><%= preduzece.status_id %></td>
+        <td><%= preduzece.id %></td>
+        <td><%= preduzece.naziv %></td>
+        <td><%= preduzece.post_broj %></td>
+        <td><%= preduzece.adresa %></td>
+        <td><%= preduzece.sajt %></td>
+        <td><%= preduzece.napomena %></td>
+        <td><%= link_to 'Show', preduzece %></td>
+        <td><%= link_to 'Edit', edit_preduzece_path(preduzece) %></td>
+        <td><%= link_to 'Destroy', preduzece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preduzece', new_preduzece_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@tip_telefona) do |f| %>
+  <% if @tip_telefona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tip_telefona.errors.count, "error") %> prohibited this tip_telefona from being saved:</h2>
+
+      <ul>
+      <% @tip_telefona.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :_id %><br>
+    <%= f.number_field :_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tip_telefona %><br>
+    <%= f.text_field :tip_telefona %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

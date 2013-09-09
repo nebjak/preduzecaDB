@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= link_to 'Back', delatnost_path(@preduzece.delatnost_id), class: "btn btn-inverse btn-small" %>
+</p>
+
+<p>
+  <strong>Naziv:</strong>
+  <%= @preduzece.naziv %>
+</p>
+
+<p>
+  <strong>Delatnost:</strong>
+  <%= @preduzece.delatnost.delatnost %>
+</p>
+
+<p>
+  <strong>Post broj:</strong>
+  <%= @preduzece.post_broj %>
+</p>
+
+<p>
+  <strong>Mesto:</strong>
+  <%= @preduzece.mesto.mesto %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @preduzece.status_id %>
+</p>
+
+<p>
+  <strong>Adresa:</strong>
+  <%= @preduzece.adresa %>
+</p>
+
+<p>
+  <strong>Sajt:</strong>
+  <%= link_to @preduzece.sajt, "http://#{@preduzece.sajt}", target: "_blank" %>
+</p>
+
+<p>
+  <strong>Telefoni:</strong>
+  <ul>
+    <% @preduzece.preduzece_telefon.each do |tel| %>
+      <li><%= tel.telefon %> (<%= tel.tip_telefona.tip_telefona %>)</li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Napomena:</strong>
+  <%= @preduzece.napomena %>
+</p>

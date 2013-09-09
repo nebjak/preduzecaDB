@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>:</strong>
+  <%= @preduzece_telefon._id %>
+</p>
+
+<p>
+  <strong>Preduzece:</strong>
+  <%= @preduzece_telefon.preduzece_id %>
+</p>
+
+<p>
+  <strong>Tip telefona:</strong>
+  <%= @preduzece_telefon.tip_telefona_id %>
+</p>
+
+<p>
+  <strong>Telefon:</strong>
+  <%= @preduzece_telefon.telefon %>
+</p>
+
+<%= link_to 'Edit', edit_preduzece_telefon_path(@preduzece_telefon) %> |
+<%= link_to 'Back', preduzece_telefon_index_path %>

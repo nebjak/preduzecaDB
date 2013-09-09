@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>:</strong>
+  <%= @mesto._id %>
+</p>
+
+<p>
+  <strong>Mesto:</strong>
+  <%= @mesto.mesto %>
+</p>
+
+<p>
+  <strong>Izbor:</strong>
+  <%= @mesto.izbor %>
+</p>
+
+<%= link_to 'Edit', edit_mesto_path(@mesto) %> |
+<%= link_to 'Back', mesto_index_path %>
